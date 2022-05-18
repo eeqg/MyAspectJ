@@ -1,2 +1,3 @@
 rootProject.name = "MyAspectJ"
 include ':app'
+include ':library'

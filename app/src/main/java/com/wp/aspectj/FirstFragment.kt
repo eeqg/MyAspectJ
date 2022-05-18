@@ -1,10 +1,12 @@
 package com.wp.aspectj
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.wp.aspectj.databinding.FragmentFirstBinding
 
@@ -34,6 +36,15 @@ class FirstFragment : Fragment() {
         
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+        
+        binding.tvAa.setOnClickListener {
+            findNavController().navigate(R.id.action_to_aaFragment)
+        }
+        
+        binding.tvClick.setOnClickListener {
+            Log.d("aa", "-----tvClick")
+            Toast.makeText(context, "tvClick", Toast.LENGTH_SHORT).show()
         }
     }
     
